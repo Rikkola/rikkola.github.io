@@ -11,7 +11,7 @@
             worker.postMessage(yaml);
             worker.onmessage = (e) => {
                 resolve(e.data);
-               // worker.terminate()
+               worker.terminate()
             };
         });
         return promise;
